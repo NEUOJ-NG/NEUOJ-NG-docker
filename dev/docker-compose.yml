@@ -1,0 +1,16 @@
+version: "3"
+services:
+
+    redis:
+        image: redis
+        container_name: neuoj-redis
+        command: redis-server --appendonly yes
+        ports:
+            - "6379:6379/tcp"
+
+    rabbitmq:
+        image: rabbitmq
+        container_name: neuoj-rabbit
+        ports:
+            - "5672:5672/tcp"
+
